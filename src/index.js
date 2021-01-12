@@ -32,6 +32,7 @@ console.log('store: ', store.getState())
 import toolkitStore from "./redux-with-toolkit/store"
 
 import { fetchUser as toolkitFetchUser } from "./redux-with-toolkit/slices/user.slice"
+import { makePost } from "./redux-with-toolkit/slices/posts.slice"
 import { 
   fetchPosts as toolkitFetchPost , 
   addPost as toolkitAddPost, 
@@ -53,5 +54,6 @@ toolkitStore.dispatch( toolkitUpdatePost( { postId: 1, title: "new title", body:
 toolkitStore.dispatch( toolkitFetchUser(1) )
 toolkitStore.dispatch( toolkitFetchPost() )
 
+toolkitStore.dispatch( makePost(1, 'title...', 'body...') )
 
 console.log('toolkitStore: ', stoolkitStoretore)
